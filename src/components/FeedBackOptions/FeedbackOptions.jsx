@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { FeedbackCont, Btn } from './FeedBackOptions.styled';
 
 export default function FeedbackOptions({ options, onLeaveFeedback }) {
-  console.log(options);
   return (
     <FeedbackCont>
       {options.map(option => {
@@ -20,9 +19,6 @@ export default function FeedbackOptions({ options, onLeaveFeedback }) {
           </Btn>
         );
       })}
-
-      {/* <button type="button">Neutral</button>
-      <button type="button">Bed</button> */}
     </FeedbackCont>
   );
 }

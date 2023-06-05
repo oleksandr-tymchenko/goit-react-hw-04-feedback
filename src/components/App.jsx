@@ -11,7 +11,7 @@ export const App = () => {
   const [positive, setPositive] = useState(0);
   const [neutral, setNeutral] = useState(0);
   const [bad, setBad] = useState(0);
-  console.log(setPositive);
+
   const countTotalFeedback = () => {
     return positive + neutral + bad;
   };
