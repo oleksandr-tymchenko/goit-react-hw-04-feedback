@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { FeedbackCont, Btn } from './FeedBackOptions.styled';
 
 export default function FeedbackOptions({ options, onLeaveFeedback }) {
+  console.log(options);
   return (
     <FeedbackCont>
       {options.map(option => {

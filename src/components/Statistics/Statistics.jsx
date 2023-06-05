@@ -26,19 +26,6 @@ export default function Statistics({
       </li>
     </ul>
   );
-  // <ul>
-  //   {[good, neutral, bad, total].map(item => {
-  //     const capitalizedItem = item[0].toUpperCase() + item.slice(1);
-  //     console.log(capitalizedItem);
-  //     return (
-  //       <li>
-  //         <p>
-  //           {capitalizedItem}: {item}
-  //         </p>
-  //       </li>
-  //     );
-  //   })}
-  // </ul>
 }
 Statistics.propTypes = {
   good: PropTypes.number.isRequired,
