@@ -8,18 +8,18 @@ import Notification from './Notification/Notification';
 import { Container } from './App.styled';
 
 export const App = () => {
-  const [positive, setPositive] = useState(0);
+  const [good, setGood] = useState(0);
   const [neutral, setNeutral] = useState(0);
   const [bad, setBad] = useState(0);
 
   const countTotalFeedback = () => {
-    return positive + neutral + bad;
+    return good + neutral + bad;
   };
 
   const handleIncrement = key => {
     switch (key) {
       case 'good':
-        setPositive(prevState => prevState + 1);
+        setGood(prevState => prevState + 1);
         break;
       case 'neutral':
         setNeutral(prevState => prevState + 1);
@@ -33,7 +33,7 @@ export const App = () => {
   };
 
   const positivePercentage = () => {
-    return Math.round((positive / countTotalFeedback()) * 100);
+    return Math.round((good / countTotalFeedback()) * 100);
   };
   return (
     <Container>
@@ -48,7 +48,7 @@ export const App = () => {
           <Notification message="There is no feedback" />
         ) : (
           <Statistics
-            good={positive}
+            good={good}
             neutral={neutral}
             bad={bad}
             total={countTotalFeedback()}
